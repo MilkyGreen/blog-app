@@ -6,9 +6,16 @@
     "start": "next start"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.0.0",
+    "@mdx-js/react": "^3.0.0",
+    "@next/mdx": "^14.1.0",
+    "@types/mdx": "^2.0.11",
     "classnames": "^2.5.1",
     "date-fns": "^3.3.1",
     "gray-matter": "^4.0.3",
+    "highlight": "^0.2.4",
+    "highlight.js": "^11.9.0",
+    "markdown-it": "^14.0.0",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
@@ -16,6 +23,8 @@
     "remark-html": "^16.0.1"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/markdown-it": "^13.0.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

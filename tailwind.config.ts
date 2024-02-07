@@ -36,6 +36,9 @@ const config: Config = {
         sm: "0 5px 10px rgba(0, 0, 0, 0.12)",
         md: "0 8px 30px rgba(0, 0, 0, 0.12)",
       },
+      backgroundColor: {
+        customGray: '#f1f5f9',
+      },
     },
   },
   plugins: [],
