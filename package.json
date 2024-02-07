@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p 8080"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.0.0",
