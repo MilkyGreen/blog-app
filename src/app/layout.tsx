@@ -1,4 +1,5 @@
 import Footer from "@/app/_components/footer";
+import Topnav from "@/app/_components/navigation";
 import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -8,7 +9,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `Next.js Blog Example with ${CMS_NAME}`,
+  title: `liyunmeng's blog`,
   description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
   openGraph: {
     images: [HOME_OG_IMAGE_URL],
@@ -56,6 +57,7 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body className={inter.className}>
+        <Topnav />
         <div className="min-h-screen">{children}</div>
         <Footer />
       </body>
