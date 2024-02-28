@@ -1,7 +1,7 @@
+import Content from "@/app/about/aboutme";
 
 export default function Index() {
     return (
-        <h1>about me</h1>
-      );
-  }
-  
+        <Content />
+    );
+}
