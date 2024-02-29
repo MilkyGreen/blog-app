@@ -12,7 +12,7 @@ export async function POST(request: Request, response: Response) {
     }
     const body = await request.json();
     console.log(body);
-    await updateBookmarkData(body.content);
+    // await updateBookmarkData(body.content);
 
     return new Response('done!', {
         status: 200,
