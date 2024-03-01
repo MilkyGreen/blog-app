@@ -11,8 +11,9 @@ export async function POST(request: Request, response: Response) {
           })
     }
     const body = await request.json();
-    console.log(JSON.stringify(body.content[0]));
-    // await updateBookmarkData(body.content);
+    const content = JSON.stringify(body.content[0]);
+    console.log(content);
+    await updateBookmarkData(content);
 
     return new Response('done!', {
         status: 200,
