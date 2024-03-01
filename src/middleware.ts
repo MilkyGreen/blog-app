@@ -4,7 +4,7 @@ const allowedOrigins = ['*','rome-extension://mijddimcmdeecchnknaampnaikniefhn']
  
 const corsOptions = {
   'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization,API_TOKEN,*',
 }
  
 export function middleware(request: NextRequest) {
