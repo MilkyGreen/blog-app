@@ -10,5 +10,5 @@ export type Bookmark = {
 
 export type Record = {
     id: string;
-    bookmarks: string;
+    bookmarks: Bookmark;
 };
