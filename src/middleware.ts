@@ -11,7 +11,7 @@ export function middleware(request: NextRequest) {
   // Check the origin from the request
   const origin = request.headers.get('origin') ?? ''
   console.log("origin="+origin);
-  const isAllowedOrigin = allowedOrigins.includes(origin)
+  const isAllowedOrigin = true;
   console.log("isAllowedOrigin="+isAllowedOrigin);
   // Handle preflighted requests
   const isPreflight = request.method === 'OPTIONS'
