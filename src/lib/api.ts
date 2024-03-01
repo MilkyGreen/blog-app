@@ -33,7 +33,7 @@ export function getAllPosts(): Post[] {
 export async function getBookmarkData(){
   const data = await sql<Record>`SELECT * from record where id = ${bookmarkRecordId}`;
   const bmstr = data.rows[0].bookmarks;
-  return JSON.parse(bmstr) as Bookmark[];
+  return JSON.parse(bmstr) as Bookmark;
 }
 
 export async function updateBookmarkData(bmstr:string){
