@@ -1,12 +1,15 @@
+
 import {Record,Bookmark} from "@/interfaces/bookmarks";
 import { getBookmarkData } from "@/lib/api";
-
-
+import LeftTab from "@/app/links/tabs"
 
 export default async function Index() {
     const bk = await getBookmarkData();
-    console.log(typeof bk)
+    console.log(JSON.stringify(bk.children))
     return (
-        <p>{JSON.stringify(bk.children)}</p>
+        <div className="ml-40">
+        <LeftTab data={bk.children} />
+        </div>
     );
 }
+
