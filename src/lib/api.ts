@@ -38,6 +38,11 @@ export async function getBookmarkData(){
 }
 
 export async function updateBookmarkData(bmstr:string){
-  await sql<Record>`DELETE FROM record WHERE id = ${bookmarkRecordId}`;
-  await sql<Record>`INSERT INTO record (id,bookmarks) values(${bookmarkRecordId},${bmstr})`;
+
+  // await sql<Record>`DELETE FROM record WHERE id = ${bookmarkRecordId}`;
+  // await sql<Record>`INSERT INTO record (id,bookmarks) values(${bookmarkRecordId},${bmstr})`;
+
+  console.log("准备插入数据库的数据"+bmstr);
+  await sql<Record>`UPDATE record set bookmarks= ${bmstr} WHERE id = ${bookmarkRecordId}`;
+
 }

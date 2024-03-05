@@ -12,7 +12,7 @@ export async function POST(request: Request, response: Response) {
     }
     const body = await request.json();
     const content = JSON.stringify(body.content[0]);
-    console.log(content);
+    
     await updateBookmarkData(content);
 
     return new Response('done!', {
