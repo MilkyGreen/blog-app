@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { join } from "path";
 import { sql } from '@vercel/postgres';
 import {Record,Bookmark} from "@/app/interfaces/bookmarks";
+import { revalidatePath } from 'next/cache';
 
 const postsDirectory = join(process.cwd(), "_posts");
 const bookmarkRecordId = 1;
@@ -39,10 +40,11 @@ export async function getBookmarkData(){
 
 export async function updateBookmarkData(bmstr:string){
 
-  // await sql<Record>`DELETE FROM record WHERE id = ${bookmarkRecordId}`;
-  // await sql<Record>`INSERT INTO record (id,bookmarks) values(${bookmarkRecordId},${bmstr})`;
-
+  await sql<Record>`DELETE FROM record WHERE id = ${bookmarkRecordId}`;
   console.log("准备插入数据库的数据"+bmstr);
-  await sql<Record>`UPDATE record set bookmarks= ${bmstr} WHERE id = ${bookmarkRecordId}`;
+  await sql<Record>`INSERT INTO record (id,bookmarks) values(${bookmarkRecordId},${bmstr})`;
 
+  // console.log("准备插入数据库的数据"+bmstr);
+  // await sql<Record>`UPDATE record set bookmarks= ${bmstr} WHERE id = ${bookmarkRecordId}`;
+  revalidatePath("/links");
 }

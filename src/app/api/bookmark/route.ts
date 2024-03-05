@@ -19,3 +19,13 @@ export async function POST(request: Request, response: Response) {
         status: 200,
     })
 }
+
+// export async function GET(request: Request, response: Response) {
+
+//     const bookmarks = await getBookmarkData();
+
+//     return new Response('ok!', {
+//         status: 200,
+//         data:bookmarks
+//     })
+// }
