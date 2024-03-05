@@ -46,5 +46,5 @@ export async function updateBookmarkData(bmstr:string){
 
   // console.log("准备插入数据库的数据"+bmstr);
   // await sql<Record>`UPDATE record set bookmarks= ${bmstr} WHERE id = ${bookmarkRecordId}`;
-  // revalidatePath("/links");
+  revalidatePath("/links");
 }
