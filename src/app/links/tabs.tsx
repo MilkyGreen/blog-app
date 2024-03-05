@@ -21,7 +21,7 @@ export default function LeftTab({
         tabPosition='left'
         size="small"
         tabBarGutter={1}
-        items={data.map(bk => {
+        items={data.filter((bk) => !bk.title.startsWith('p_') && bk.children).map(bk => {
           return {
             label: `${bk.title}`,
             key: bk.title,
