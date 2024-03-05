@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Radio, Space, Tabs } from 'antd';
-import { Record, Bookmark } from "@/interfaces/bookmarks";
+import { Record, Bookmark } from "@/app/interfaces/bookmarks";
 import Lists from "@/app/links/list";
 
 const onTabClick = (activeKey: string, e: React.KeyboardEvent | React.MouseEvent) => {

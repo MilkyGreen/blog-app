@@ -1,5 +1,5 @@
 import { headers } from 'next/headers'
-import {getBookmarkData,updateBookmarkData} from "@/lib/api"
+import {getBookmarkData,updateBookmarkData} from "@/app/lib/api"
 export const dynamic = 'force-dynamic' // defaults to auto
 
 export async function POST(request: Request, response: Response) {

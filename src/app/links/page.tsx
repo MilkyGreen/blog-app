@@ -1,6 +1,6 @@
 
-import {Record,Bookmark} from "@/interfaces/bookmarks";
-import { getBookmarkData } from "@/lib/api";
+import {Record,Bookmark} from "@/app/interfaces/bookmarks";
+import { getBookmarkData } from "@/app/lib/api";
 import LeftTab from "@/app/links/tabs"
 
 export default async function Index() {

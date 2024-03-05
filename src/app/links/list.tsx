@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Avatar, List } from 'antd';
-import {Record,Bookmark} from "@/interfaces/bookmarks";
+import {Record,Bookmark} from "@/app/interfaces/bookmarks";
 
 
 export default function Lists({data}:{data:Bookmark[]}) {
