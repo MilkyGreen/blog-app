@@ -5,10 +5,6 @@ import { Radio, Space, Tabs } from 'antd';
 import { Record, Bookmark } from "@/app/interfaces/bookmarks";
 import Lists from "@/app/links/list";
 
-const onTabClick = (activeKey: string, e: React.KeyboardEvent | React.MouseEvent) => {
-  alert(activeKey)
-}
-
 export default function LeftTab({
   data
 }: {

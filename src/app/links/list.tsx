@@ -7,7 +7,7 @@ export default function Lists({data}:{data:Bookmark[]}) {
   return (
     <>
       <List
-        dataSource={data}
+        dataSource={data.reverse()}
         renderItem={(item, index) => (
           <List.Item>
             <List.Item.Meta
