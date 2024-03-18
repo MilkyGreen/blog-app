@@ -35,12 +35,37 @@ const config: Config = {
       boxShadow: {
         sm: "0 5px 10px rgba(0, 0, 0, 0.12)",
         md: "0 8px 30px rgba(0, 0, 0, 0.12)",
-      },
-      backgroundColor: {
-        customGray: '#f1f5f9',
-      },
+      }
     },
   },
-  plugins: [],
+  variants: {
+    extend: {
+      // backdropFilter: ['responsive'], // or other variants you need
+    },
+  },
+  plugins: [
+    // require('@tailwindcss/postcss7-compat')
+  ],
 };
 export default config;
+
+
+
+// module.exports = {
+//   theme: {
+//     extend: {
+//       backdropFilter: {
+//         'none': 'none',
+//         'blur': 'blur(20px)',
+//       },
+//     },
+//   },
+//   variants: {
+//     extend: {
+//       backdropFilter: ['responsive'], // or other variants you need
+//     },
+//   },
+//   plugins: [
+//     require('@tailwindcss/postcss7-compat')
+//   ],
+// }

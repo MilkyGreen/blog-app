@@ -58,8 +58,13 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Topnav />
-        <div className="min-h-screen">{children}</div>
-        <Footer />
+        <div className="pt-10 flex flex-col min-h-screen justify-between">
+          <div className="">
+            {children}
+          </div>
+          <Footer />
+        </div>
+        
       </body>
     </html>
   );
