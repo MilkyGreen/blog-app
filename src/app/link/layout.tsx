@@ -14,7 +14,7 @@ export default async function Root({
 
   return (
     <div className='flex mt-4'>
-      <LinkNav data={bk.children} />
+      <LinkNav data={bk.children.filter(i => !i.title.startsWith('p') && i.children != null)} />
       {children}
     </div>
   );

@@ -11,6 +11,7 @@ import { revalidatePath } from 'next/cache';
 const bookmarkRecordId = 1;
 
 export async function getBookmarkData(){
+
   const data = await sql<Record>`SELECT * from record where id = ${bookmarkRecordId}`;
   const bmstr = data.rows[0].bookmarks;
   // const bm = JSON.parse(bmstr) as Bookmark;
@@ -25,5 +26,5 @@ export async function updateBookmarkData(bmstr:string){
 
   // console.log("准备插入数据库的数据"+bmstr);
   await sql<Record>`UPDATE record set bookmarks= ${bmstr} WHERE id = ${bookmarkRecordId}`;
-  revalidatePath("/links");
+  revalidatePath("/link");
 }
