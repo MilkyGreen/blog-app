@@ -5,20 +5,18 @@ import { ReactNode } from 'react'; // Import ReactNode type
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 export default async function Content({ params }: Params) { // Specify the return type as Promise<ReactNode>
-    
-    const bk = await getBookmarkData();
 
-    return (
-        <div className="pl-80 m-4 w-full flex flex-col max-w-full">
-            {/* <ScrollArea className="w-full h-screenMinusFooter"> */}
-            <List title={params.title} bks={bk.children}/>
-            {/* </ScrollArea> */}
-        </div>
-    );
+  const bk = await getBookmarkData();
+
+  return (
+    <div className="flex flex-col">
+      <List title={params.title} bks={bk.children} />
+    </div>
+  );
 }
 
 type Params = {
-    params: {
-        title: string;
-    };
+  params: {
+    title: string;
+  };
 }

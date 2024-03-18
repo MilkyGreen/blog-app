@@ -8,21 +8,21 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 
 export default function LinkNav({ data }: { data: Bookmark[] }) {
-  const pathname = usePathname();
+  const pathname = usePathname().substring(6);
+  console.log('pathname', pathname);
   return (
 
-    <div className='w-70 ml-20 fixed top-20 h-screenMinusFooter flex-col  pb-5 mb-20 mb-20'>
-
-      <nav className="flex flex-col items-center justify-center space-y-0">
-        <ScrollArea className="w-full h-screenMinusFooter">
+    <div className='w-60 fixed top-20 h-screenMinusFooter ml-10'>
+      <nav className="flex flex-col space-y-0">
+        <ScrollArea className="h-screenMinusFooter">
           {
             data.map((i) => {
               return (
                 <Link
                   className={clsx(
-                    'm-2 text-gray-500 hover:bg-blue-50 flex items-center max-w-xs py-2 px-4 text-sm pr-2 rounded-xl',
+                    'm-2 text-gray-500 hover:bg-blue-100 flex items-center py-2 px-4 text-sm pr-2 rounded-xl',
                     {
-                      'text-gray-500 no-underline bg-blue-100': pathname.endsWith(i.title),
+                      'text-gray-500 no-underline bg-blue-200': decodeURIComponent(pathname) == (i.title),
                     },
                   )}
                   key={i.title} href={`/link/${i.title}`}>{i.title}</Link>

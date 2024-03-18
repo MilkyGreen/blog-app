@@ -13,9 +13,12 @@ export default async function Root({
   // console.log("查询到的书签数据："+JSON.stringify(bk.children))
 
   return (
-    <div className='flex mt-4'>
+    <div className='flex'>
       <LinkNav data={bk.children.filter(i => !i.title.startsWith('p') && i.children != null)} />
-      {children}
+      <div className='ml-80 pt-10 w-2/3'>
+        {children}
+      </div>
+
     </div>
   );
 

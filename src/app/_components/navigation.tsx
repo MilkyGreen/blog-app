@@ -33,7 +33,7 @@ const items = [
 export default function Topnav() {
   const pathname = usePathname();
   return (
-    <nav className='flex justify-center items-center pb-4 pt-4 mt-0 m-4 fixed top-0 w-full border-b backdrop-filter backdrop-blur-lg bg-opacity-40 border-gray-200'>
+    <nav className='flex justify-center items-center pb-4 pt-4 mt-0 m-4 fixed top-0 w-full border-b backdrop-filter backdrop-blur-xl bg-opacity-40 border-gray-200'>
       <div className='w-64'>
       {
         items.map((i) => {
