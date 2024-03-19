@@ -10,7 +10,7 @@ export default function Index() {
   return (
     <main>
       <Container>
-        <Intro />
+        {/* <Intro /> */}
         {/* <HeroPost
           title={heroPost.title}
           coverImage={heroPost.coverImage}

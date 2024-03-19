@@ -7,6 +7,6 @@ import { usePathname } from "next/navigation";
 
 export default function Index() {
   return (
-      <div>contentcontentcontentcontentcontentcontentcontent</div>
+      <div>My bookmarks'backup, synced from the browser by extension, stored in PGSQL</div>
     );
 }

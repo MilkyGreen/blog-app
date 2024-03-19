@@ -58,7 +58,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Topnav />
-        <div className="pt-10 flex flex-col min-h-screen justify-between">
+        <div className="pt-10 flex flex-col min-h-screen justify-between mt-10">
         {/* <div className="pt-10 flex flex-col min-h-screen"> */}
           {children}
           <Footer />
